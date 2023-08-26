@@ -1,5 +1,6 @@
 package effectivejava.chapter4.item22.constantinterface;
 
+// TODO: 2023/8/27 do not use!
 // Constant interface antipattern - do not use!
 public interface PhysicalConstants {
     // Avogadro's number (1/mol)
