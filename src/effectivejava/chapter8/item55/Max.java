@@ -35,19 +35,19 @@ public class Max {
 //        return Optional.of(result);
 //    }
 
-    // Returns max val in collection as Optional<E> - uses stream (Page 250)
-    public static <E extends Comparable<E>>
-    Optional<E> max(Collection<E> c) {
-        return c.stream().max(Comparator.naturalOrder());
-    }
+  // Returns max val in collection as Optional<E> - uses stream (Page 250)
+  public static <E extends Comparable<E>>
+  Optional<E> max(Collection<E> c) {
+    return c.stream().max(Comparator.naturalOrder());
+  }
 
-    public static void main(String[] args) {
-        List<String> words = Arrays.asList(args);
+  public static void main(String[] args) {
+    List<String> words = Arrays.asList(args);
 
-        System.out.println(max(words));
+    System.out.println(max(words));
 
-        // Using an optional to provide a chosen default value (Page 251)
-        String lastWordInLexicon = max(words).orElse("No words...");
-        System.out.println(lastWordInLexicon);
-    }
+    // Using an optional to provide a chosen default value (Page 251)
+    String lastWordInLexicon = max(words).orElse("No words...");
+    System.out.println(lastWordInLexicon);
+  }
 }

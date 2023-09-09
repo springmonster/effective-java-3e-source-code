@@ -6,39 +6,41 @@ import java.util.TreeSet;
 
 // Single-field Comparable with object reference field  (Page 69)
 public final class CaseInsensitiveString
-        implements Comparable<CaseInsensitiveString> {
-    private final String s;
+    implements Comparable<CaseInsensitiveString> {
 
-    public CaseInsensitiveString(String s) {
-        this.s = Objects.requireNonNull(s);
-    }
+  private final String s;
 
-    // Fixed equals method (Page 40)
-    @Override
-    public boolean equals(Object o) {
-        return o instanceof CaseInsensitiveString &&
-                ((CaseInsensitiveString) o).s.equalsIgnoreCase(s);
-    }
+  public CaseInsensitiveString(String s) {
+    this.s = Objects.requireNonNull(s);
+  }
 
-    @Override
-    public int hashCode() {
-        return s.hashCode();
-    }
+  // Fixed equals method (Page 40)
+  @Override
+  public boolean equals(Object o) {
+    return o instanceof CaseInsensitiveString &&
+        ((CaseInsensitiveString) o).s.equalsIgnoreCase(s);
+  }
 
-    @Override
-    public String toString() {
-        return s;
-    }
+  @Override
+  public int hashCode() {
+    return s.hashCode();
+  }
 
-    // Using an existing comparator to make a class comparable
-    public int compareTo(CaseInsensitiveString cis) {
-        return String.CASE_INSENSITIVE_ORDER.compare(s, cis.s);
-    }
+  @Override
+  public String toString() {
+    return s;
+  }
 
-    public static void main(String[] args) {
-        Set<CaseInsensitiveString> s = new TreeSet<>();
-        for (String arg : args)
-            s.add(new CaseInsensitiveString(arg));
-        System.out.println(s);
+  // Using an existing comparator to make a class comparable
+  public int compareTo(CaseInsensitiveString cis) {
+    return String.CASE_INSENSITIVE_ORDER.compare(s, cis.s);
+  }
+
+  public static void main(String[] args) {
+    Set<CaseInsensitiveString> s = new TreeSet<>();
+    for (String arg : args) {
+      s.add(new CaseInsensitiveString(arg));
     }
+    System.out.println(s);
+  }
 }

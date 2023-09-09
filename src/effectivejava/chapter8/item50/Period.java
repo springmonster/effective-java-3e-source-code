@@ -4,34 +4,36 @@ import java.util.Date;
 
 // Broken "immutable" time period class (Pages 231-3)
 public final class Period {
-    private final Date start;
-    private final Date end;
 
-    /**
-     * @param start the beginning of the period
-     * @param end   the end of the period; must not precede start
-     * @throws IllegalArgumentException if start is after end
-     * @throws NullPointerException     if start or end is null
-     */
-    public Period(Date start, Date end) {
-        if (start.compareTo(end) > 0)
-            throw new IllegalArgumentException(
-                    start + " after " + end);
-        this.start = start;
-        this.end = end;
-    }
+  private final Date start;
+  private final Date end;
 
-    public Date start() {
-        return start;
+  /**
+   * @param start the beginning of the period
+   * @param end   the end of the period; must not precede start
+   * @throws IllegalArgumentException if start is after end
+   * @throws NullPointerException     if start or end is null
+   */
+  public Period(Date start, Date end) {
+    if (start.compareTo(end) > 0) {
+      throw new IllegalArgumentException(
+          start + " after " + end);
     }
+    this.start = start;
+    this.end = end;
+  }
 
-    public Date end() {
-        return end;
-    }
+  public Date start() {
+    return start;
+  }
 
-    public String toString() {
-        return start + " - " + end;
-    }
+  public Date end() {
+    return end;
+  }
+
+  public String toString() {
+    return start + " - " + end;
+  }
 
 //    // Repaired constructor - makes defensive copies of parameters (Page 232)
 //    public Period(Date start, Date end) {
@@ -52,5 +54,5 @@ public final class Period {
 //        return new Date(end.getTime());
 //    }
 
-    // Remainder omitted
+  // Remainder omitted
 }

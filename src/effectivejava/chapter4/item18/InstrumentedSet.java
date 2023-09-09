@@ -7,31 +7,32 @@ import java.util.Set;
 
 // Wrapper class - uses composition in place of inheritance  (Page 90)
 public class InstrumentedSet<E> extends ForwardingSet<E> {
-    private int addCount = 0;
 
-    public InstrumentedSet(Set<E> s) {
-        super(s);
-    }
+  private int addCount = 0;
 
-    @Override
-    public boolean add(E e) {
-        addCount++;
-        return super.add(e);
-    }
+  public InstrumentedSet(Set<E> s) {
+    super(s);
+  }
 
-    @Override
-    public boolean addAll(Collection<? extends E> c) {
-        addCount += c.size();
-        return super.addAll(c);
-    }
+  @Override
+  public boolean add(E e) {
+    addCount++;
+    return super.add(e);
+  }
 
-    public int getAddCount() {
-        return addCount;
-    }
+  @Override
+  public boolean addAll(Collection<? extends E> c) {
+    addCount += c.size();
+    return super.addAll(c);
+  }
 
-    public static void main(String[] args) {
-        InstrumentedSet<String> s = new InstrumentedSet<>(new HashSet<>());
-        s.addAll(List.of("Snap", "Crackle", "Pop"));
-        System.out.println(s.getAddCount());
-    }
+  public int getAddCount() {
+    return addCount;
+  }
+
+  public static void main(String[] args) {
+    InstrumentedSet<String> s = new InstrumentedSet<>(new HashSet<>());
+    s.addAll(List.of("Snap", "Crackle", "Pop"));
+    System.out.println(s.getAddCount());
+  }
 }
