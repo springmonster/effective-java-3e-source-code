@@ -4,7 +4,7 @@ public abstract class Animal {
 
   private final String name;
 
-  protected Animal(AnimalBuilder<?, ?> builder) {
+  Animal(AnimalBuilder<?, ?> builder) {
     this.name = builder.name;
   }
 

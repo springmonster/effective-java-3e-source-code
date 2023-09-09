@@ -2,9 +2,9 @@ package effectivejava.chapter2.item2.hierarchicalbuilder.examples;
 
 public class Cat extends Animal {
 
-  private String color;
+  private final String color;
 
-  protected Cat(CatBuilder builder) {
+  private Cat(CatBuilder builder) {
     super(builder);
     this.color = builder.color;
   }

@@ -2,9 +2,9 @@ package effectivejava.chapter2.item2.hierarchicalbuilder.examples;
 
 public class Dog extends Animal {
 
-  private String type;
+  private final String type;
 
-  protected Dog(DogBuilder builder) {
+  private Dog(DogBuilder builder) {
     super(builder);
     this.type = builder.type;
   }
