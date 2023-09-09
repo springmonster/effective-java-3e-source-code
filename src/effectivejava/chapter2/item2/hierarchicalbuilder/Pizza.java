@@ -14,6 +14,10 @@ public abstract class Pizza {
 
   final Set<Topping> toppings;
 
+  Pizza(Builder<?> builder) {
+    toppings = builder.toppings.clone(); // See Item 50
+  }
+  
   abstract static class Builder<T extends Builder<T>> {
 
     EnumSet<Topping> toppings = EnumSet.noneOf(Topping.class);
@@ -27,9 +31,5 @@ public abstract class Pizza {
 
     // Subclasses must override this method to return "this"
     protected abstract T self();
-  }
-
-  Pizza(Builder<?> builder) {
-    toppings = builder.toppings.clone(); // See Item 50
   }
 }
