@@ -1,5 +1,6 @@
 package effectivejava.chapter2.item2.javabeans;
 
+// TODO: 2023/9/9 do not use this pattern!
 // JavaBeans Pattern - allows inconsistency, mandates mutability  (pages 11-12)
 public class NutritionFacts {
 

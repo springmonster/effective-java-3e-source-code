@@ -1,5 +1,6 @@
 package effectivejava.chapter2.item2.telescopingconstructor;
 
+// TODO: 2023/9/9 do not use this pattern!
 // Telescoping constructor pattern - does not scale well! (Pages 10-11)
 public class NutritionFacts {
 
