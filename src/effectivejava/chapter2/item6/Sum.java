@@ -1,5 +1,6 @@
 package effectivejava.chapter2.item6;
 
+// TODO: 2023/9/10 do not use this pattern! do not use unnecessary autoboxing!
 // Hideously slow program! Can you spot the object creation? (Page 24)
 public class Sum {
 

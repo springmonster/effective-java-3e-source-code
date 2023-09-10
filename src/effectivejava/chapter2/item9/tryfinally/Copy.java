@@ -6,7 +6,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-public class Copy {
+// TODO: 2023/9/10 do not use this pattern!
+public final class Copy {
 
   private static final int BUFFER_SIZE = 8 * 1024;
 

@@ -5,7 +5,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class TopLineWithDefault {
+public final class TopLineWithDefault {
 
   // try-with-resources with a catch clause  (Page 36)
   static String firstLineOfFile(String path, String defaultVal) {

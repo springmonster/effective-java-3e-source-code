@@ -22,7 +22,10 @@ public class Stack {
     if (size == 0) {
       throw new EmptyStackException();
     }
-    return elements[--size];
+    Object result = elements[--size];
+    // TODO: 2023/9/10 Eliminate obsolete reference
+    elements[size] = null; // Eliminate obsolete reference
+    return result;
   }
 
   /**

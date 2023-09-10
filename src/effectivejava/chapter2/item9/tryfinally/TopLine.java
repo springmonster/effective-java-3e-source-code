@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+// TODO: 2023/9/10 do not use this pattern!
 public class TopLine {
 
   // try-finally - No longer the best way to close resources! (page 34)
