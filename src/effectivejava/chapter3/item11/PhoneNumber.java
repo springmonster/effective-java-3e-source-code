@@ -36,13 +36,14 @@ public final class PhoneNumber {
 
   // Broken with no hashCode; works with any of the three below
 
-//    // Typical hashCode method (Page 52)
-//    @Override public int hashCode() {
-//        int result = Short.hashCode(areaCode);
-//        result = 31 * result + Short.hashCode(prefix);
-//        result = 31 * result + Short.hashCode(lineNum);
-//        return result;
-//    }
+  // Typical hashCode method (Page 52)
+  @Override
+  public int hashCode() {
+    int result = Short.hashCode(areaCode);
+    result = 31 * result + Short.hashCode(prefix);
+    result = 31 * result + Short.hashCode(lineNum);
+    return result;
+  }
 
 //    // One-line hashCode method - mediocre performance  (page 53)
 //    @Override public int hashCode() {

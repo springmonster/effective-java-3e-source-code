@@ -48,10 +48,11 @@ public final class PhoneNumber {
    * padded with leading zeros. For example, if the value of the line number is 123, the last four
    * characters of the string representation will be "0123".
    */
-//    @Override public String toString() {
-//        return String.format("%03d-%03d-%04d",
-//                areaCode, prefix, lineNum);
-//    }
+  @Override
+  public String toString() {
+    return String.format("%03d-%03d-%04d",
+        areaCode, prefix, lineNum);
+  }
   public static void main(String[] args) {
     PhoneNumber jenny = new PhoneNumber(707, 867, 5309);
     System.out.println("Jenny's number: " + jenny);
