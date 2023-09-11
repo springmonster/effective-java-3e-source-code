@@ -1,5 +1,9 @@
 package effectivejava.chapter3.item10;
 
+// TODO: 2023/9/11 Best Practice!
+// 如果重写了equals方法，就必须重写hashCode方法
+// 为什么？
+// 如果不重写hashCode方法，那么就会违反hashCode的通用约定，即相等的对象必须具有相等的散列码
 // Class with a typical equals method (Page 48)
 public final class PhoneNumber {
 
