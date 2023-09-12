@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 
+// TODO: 2023/9/12 do not use this pattern!
 // Broken - Inappropriate use of inheritance! (Page 87)
 public class InstrumentedHashSet<E> extends HashSet<E> {
 

@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Set;
 
+// TODO: 2023/9/12 Best Practice!
 // Reusable forwarding class (Page 90)
 public class ForwardingSet<E> implements Set<E> {
 
