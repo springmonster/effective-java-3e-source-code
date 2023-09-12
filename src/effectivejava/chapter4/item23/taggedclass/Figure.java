@@ -1,5 +1,6 @@
 package effectivejava.chapter4.item23.taggedclass;
 
+// TODO: 2023/9/12 Do not use!
 // Tagged class - vastly inferior to a class hierarchy! (Page 109)
 class Figure {
 

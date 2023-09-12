@@ -3,7 +3,7 @@ package effectivejava.chapter4.item22.constantutilityclass;
 // TODO: 2023/8/27 Best Practice!
 
 // Constant utility class (Page 108)
-public class PhysicalConstants {
+public final class PhysicalConstants {
 
   private PhysicalConstants() {
   }  // Prevents instantiation
