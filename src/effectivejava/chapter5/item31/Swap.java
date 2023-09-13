@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 // Private helper method for wildcard capture (Page 145)
-public class Swap {
+public final class Swap {
 
   public static void swap(List<?> list, int i, int j) {
     swapHelper(list, i, j);

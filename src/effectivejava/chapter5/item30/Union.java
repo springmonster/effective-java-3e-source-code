@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 // Generic union method and program to exercise it  (Pages 135-6)
-public class Union {
+public final class Union {
 
   // Generic method
   public static <E> Set<E> union(Set<E> s1, Set<E> s2) {

@@ -3,10 +3,10 @@ package effectivejava.chapter5.item30;
 import java.util.function.UnaryOperator;
 
 // Generic singleton factory pattern (Page 136-7)
-public class GenericSingletonFactory {
+public final class GenericSingletonFactory {
 
   // Generic singleton factory pattern
-  private static UnaryOperator<Object> IDENTITY_FN = (t) -> t;
+  private static final UnaryOperator<Object> IDENTITY_FN = (t) -> t;
 
   @SuppressWarnings("unchecked")
   public static <T> UnaryOperator<T> identityFunction() {

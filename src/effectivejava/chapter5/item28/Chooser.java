@@ -6,6 +6,19 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * 这里有抑制警告的注释
+ *   @SuppressWarnings("unchecked")
+ *     public <T> T[] toArray(T[] a) {
+ *         if (a.length < size)
+ *             // Make a new array of a's runtime type, but my contents:
+ *             return (T[]) Arrays.copyOf(elementData, size, a.getClass());
+ *         System.arraycopy(elementData, 0, a, 0, size);
+ *         if (a.length > size)
+ *             a[size] = null;
+ *         return a;
+ *     }
+ */
 // List-based Chooser - typesafe (Page 129)
 public class Chooser<T> {
 
