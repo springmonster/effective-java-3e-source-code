@@ -3,7 +3,7 @@ package effectivejava.chapter8.item50;
 import java.util.Date;
 
 // Two attacks on the internals of an "immutable" period (232-3)
-public class Attacks {
+public final class Attacks {
 
   public static void main(String[] args) {
     // Attack the internals of a Period instance  (Page 232)

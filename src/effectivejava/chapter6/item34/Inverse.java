@@ -1,22 +1,16 @@
 package effectivejava.chapter6.item34;
 
 // Switch on an enum to simulate a missing method (Page 167)
-public class Inverse {
+public final class Inverse {
 
   public static Operation inverse(Operation op) {
-    switch (op) {
-      case PLUS:
-        return Operation.MINUS;
-      case MINUS:
-        return Operation.PLUS;
-      case TIMES:
-        return Operation.DIVIDE;
-      case DIVIDE:
-        return Operation.TIMES;
-
-      default:
-        throw new AssertionError("Unknown op: " + op);
-    }
+    return switch (op) {
+      case PLUS -> Operation.MINUS;
+      case MINUS -> Operation.PLUS;
+      case TIMES -> Operation.DIVIDE;
+      case DIVIDE -> Operation.TIMES;
+      default -> throw new AssertionError("Unknown op: " + op);
+    };
   }
 
   public static void main(String[] args) {
