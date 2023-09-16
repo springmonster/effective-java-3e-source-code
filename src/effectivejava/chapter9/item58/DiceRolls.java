@@ -13,18 +13,18 @@ public class DiceRolls {
     // Same bug, different symptom!
     Collection<Face> faces = EnumSet.allOf(Face.class);
 
-      for (Iterator<Face> i = faces.iterator(); i.hasNext(); ) {
-          for (Iterator<Face> j = faces.iterator(); j.hasNext(); ) {
-              System.out.println(i.next() + " " + j.next());
-          }
+    for (Iterator<Face> i = faces.iterator(); i.hasNext(); ) {
+      for (Face face : faces) {
+        System.out.println(i.next() + " " + face);
       }
+    }
 
     System.out.println("***************************");
 
-      for (Face f1 : faces) {
-          for (Face f2 : faces) {
-              System.out.println(f1 + " " + f2);
-          }
+    for (Face f1 : faces) {
+      for (Face f2 : faces) {
+        System.out.println(f1 + " " + f2);
       }
+    }
   }
 }

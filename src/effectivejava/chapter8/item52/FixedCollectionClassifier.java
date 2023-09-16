@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Set;
 
 // Repaired  static classifier method. (Page 240)
-public class FixedCollectionClassifier {
+public final class FixedCollectionClassifier {
 
   public static String classify(Collection<?> c) {
     return c instanceof Set ? "Set" :

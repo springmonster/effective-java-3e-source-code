@@ -3,7 +3,7 @@ package effectivejava.chapter9.item59;
 import java.util.Random;
 
 // Random number generation is hard! - Page 215
-public class RandomBug {
+public final class RandomBug {
 
   // Common but deeply flawed!
   static Random rnd = new Random();
